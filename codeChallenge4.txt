@@ -1,0 +1,25 @@
+import java.sql.SQLOutput;
+
+public class Main {
+
+
+    public static void main (String[] args){
+
+        int[] intArray = new int[]{-1, -1, -1, 2};
+        int i ,j, k, counter = 0;
+
+        for (i = 0; i < intArray.length; i++)
+            for (j = i + 1; j < intArray.length; j++)
+                for ( k = j + 1; k <intArray.length; k++)
+            if (intArray[i] + intArray[j] + intArray[k] == 0) {
+                intArray[j] = Integer.MAX_VALUE;
+                intArray[k] = Integer.MAX_VALUE;
+                counter++;
+            }
+
+
+        System.out.println(counter);
+    }
+
+}
+

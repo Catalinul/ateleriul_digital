@@ -1,0 +1,67 @@
+import java.sql.SQLOutput;
+
+public class Main {
+
+    public static String compute (int x) {
+
+        String sir = " ";
+
+        if (x % 3 == 0)
+            sir = sir.concat("Foo");
+        if (x % 5 == 0)
+            sir = sir.concat("Bar");
+        if (x % 7 == 0)
+            sir = sir.concat("Qix");
+
+        while (x != 0) {
+            if (x % 10 == 3)
+                sir = sir.concat("Foo");
+            if (x % 10 == 5)
+                sir = sir.concat("Bar");
+            if (x % 10 == 7)
+                sir = sir.concat("Qix");
+
+            x /= 10;
+        }
+
+        return sir;
+    }
+
+    public static String compute2(int x){
+        //nu am inteles enuntul
+
+        String sir = " ";
+
+        if (x % 3 == 0)
+            sir = sir.concat("Foo");
+        if (x % 5 == 0)
+            sir = sir.concat("Bar");
+        if (x % 7 == 0)
+            sir = sir.concat("Qix");
+
+        while (x != 0) {
+            if (x % 10 == 3)
+                sir = sir.concat("Foo");
+            else if (x % 10 == 5)
+                sir = sir.concat("Bar");
+            else if (x % 10 == 7)
+                sir = sir.concat("Qix");
+            else if (x % 10 == 0 && x > 9 )
+                sir = sir.concat("*");
+            else
+                sir = sir + x%10;
+            x /= 10;
+        }
+
+        return sir;
+
+    }
+
+    public static void main (String[] args){
+
+        System.out.println(compute2(10101));
+
+    }
+
+}
+
